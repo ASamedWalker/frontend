@@ -21,7 +21,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.okada.app",
       "config": {
-        "googleMapsApiKey": "AIzaSyC2JXoIWZ4DjIOj679klaltHU6swNa3ELo"
+        "googleMapsApiKey": "your_api_key_here"
       },
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Okada needs your location to find nearby rides and drivers.",
@@ -51,7 +51,7 @@
       "package": "com.okada.app",
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyC2JXoIWZ4DjIOj679klaltHU6swNa3ELo"
+          "apiKey": "your_api_key_here"
         }
       }
     },
