@@ -1,28 +1,79 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "Okada",
+    "slug": "okada-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FF6B00"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": ["react-native-maps", "react-native-maps-directions"]
+      }
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.okada.app",
+      "config": {
+        "googleMapsApiKey": "AIzaSyC2JXoIWZ4DjIOj679klaltHU6swNa3ELo"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Okada needs your location to find nearby rides and drivers.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Okada needs your location to find nearby rides and drivers even when the app is in the background.",
+        "UIBackgroundModes": ["location", "fetch"],
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSExceptionDomains": {
+            "localhost": {
+              "NSExceptionAllowsInsecureHTTPLoads": true
+            }
+          }
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FF6B00"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "INTERNET"
+      ],
+      "package": "com.okada.app",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC2JXoIWZ4DjIOj679klaltHU6swNa3ELo"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "newArchEnabled": false,
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Okada to use your location to find nearby rides and drivers.",
+          "locationWhenInUsePermission": "Allow Okada to use your location while using the app.",
+          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "400ca81e-8815-4aa7-ad82-b421d95a8f2d"
+      }
     }
   }
 }
