@@ -242,7 +242,7 @@ const RideConfirmationScreen = () => {
   //     const driverPos = initializeDriverPosition();
 
   //     // Use Google Directions API with these coordinates
-  //     const API_KEY = "AIzaSyC2JXoIWZ4DjIOj679klaltHU6swNa3ELo";
+  //     const API_KEY = "Your API Key";
 
   //     const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${pickup.latitude},${pickup.longitude}&destination=${dropoff.latitude},${dropoff.longitude}&mode=driving&key=${API_KEY}`;
 
